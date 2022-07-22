@@ -3,7 +3,7 @@
         "void-style": [
             "error",
             {
-                "style": "off"
+                "style": "selfclosing"
             }
         ]
     }
