@@ -428,8 +428,8 @@
       thisCart.dom.productList.addEventListener('updated', function () {
         thisCart.update();
       });
-      thisCart.dom.productList.addEventListener('remove', function () {
-        thisCart.remove();
+      thisCart.dom.productList.addEventListener('remove', function (event) {
+        thisCart.remove(event.detail.cartProduct);
       });
     }
 
@@ -476,10 +476,17 @@
       thisCart.dom.deliveryFee.innerHTML = thisCart.deliveryFee;
       thisCart.dom.subtotalPrice.innerHTML = thisCart.subtotalPrice;
       // console.log('totalPrice:', totalPrice);
-      console.log('thisCart:', thisCart);
+      // console.log('thisCart:', thisCart);
       // console.log('deliveryFee:', deliveryFee);
     }
-    remove() {}
+    remove(product) {
+      const thisCart = this;
+      const indexOfProduct = thisCart.products.indexOf(product);
+
+      thisCart.products.splice(indexOfProduct, 1);
+      product.dom.wrapper.remove();
+      thisCart.update();
+    }
   }
 
   class CartProduct {
@@ -501,10 +508,10 @@
       const thisCartProduct = this;
 
       thisCartProduct.dom = {
-        amountWidget: document.querySelector(select.cartProduct.amountWidget),
-        price: document.querySelector(select.cartProduct.price),
-        edit: document.querySelector(select.cartProduct.edit),
-        remove: document.querySelector(select.cartProduct.remove),
+        amountWidget: element.querySelector(select.cartProduct.amountWidget),
+        price: element.querySelector(select.cartProduct.price),
+        edit: element.querySelector(select.cartProduct.edit),
+        remove: element.querySelector(select.cartProduct.remove),
       };
 
       thisCartProduct.dom.wrapper = element;
