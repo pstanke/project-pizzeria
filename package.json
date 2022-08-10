@@ -47,6 +47,8 @@
     "stylelint-scss": "^3.5.4"
   },
   "dependencies": {
-    "json-server": "^0.17.0"
+    "flatpickr": "^4.6.13",
+    "json-server": "^0.17.0",
+    "rangeslider.js": "^2.3.3"
   }
 }
