@@ -8,7 +8,7 @@ const app = {
     const thisApp = this;
 
     const bookingElem = document.querySelector(select.containerOf.booking);
-    console.log('bookingElem', bookingElem);
+    // console.log('bookingElem', bookingElem);
     thisApp.booking = new Booking(bookingElem);
   },
 
@@ -89,13 +89,13 @@ const app = {
         return rawResponse.json();
       })
       .then(function (parsedResponse) {
-        console.log('parsedResponse:', parsedResponse);
+        // console.log('parsedResponse:', parsedResponse);
         /* save parsedResponse as thisApp.data.products*/
         thisApp.data.products = parsedResponse;
         /* execute initMenu method*/
         thisApp.initMenu();
       });
-    console.log('thisApp.data', JSON.stringify(thisApp.data));
+    // console.log('thisApp.data', JSON.stringify(thisApp.data));
   },
 
   init: function () {
