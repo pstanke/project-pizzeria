@@ -1,5 +1,6 @@
 export const select = {
   templateOf: {
+    home: '#template-home', // CODE ADDED
     menuProduct: '#template-menu-product',
     cartProduct: '#template-cart-product', // CODE ADDED
     bookingWidget: '#template-booking-widget', // CODE ADDED
@@ -9,6 +10,7 @@ export const select = {
     cart: '#cart',
     pages: '#pages', // CODE ADDED
     booking: '.booking-wrapper', // CODE ADDED
+    home: '.home-wrapper', // CODE ADDED
     floor: '.floor-plan',
   },
   all: {
@@ -50,8 +52,13 @@ export const select = {
     address: '[name="address"]',
     checkbox: '[name="starter"]',
   },
+  home: {
+    carousel: '.main-carousel',
+  },
   nav: {
-    links: '.main-nav a', // CODE ADDED
+    links: '.main-nav a',
+    homeLinks: '.home-nav',
+    // CODE ADDED
   },
   // CODE ADDED START
   cart: {
@@ -147,6 +154,9 @@ export const templates = {
   // CODE ADDED START
   bookingWidget: Handlebars.compile(
     document.querySelector(select.templateOf.bookingWidget).innerHTML
+  ),
+  Home: Handlebars.compile(
+    document.querySelector(select.templateOf.home).innerHTML
   ),
   // CODE ADDED END
 };

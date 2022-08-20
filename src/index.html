@@ -18,7 +18,11 @@
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
     <link rel="stylesheet" href="vendor/range-slider.min.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -30,6 +34,7 @@
             <h2 class="logo__subtitle">the best homemade Italian food</h2>
           </div>
           <div class="main-nav">
+            <a href="#home">Home</a>
             <a href="#order">Order</a>
             <a href="#booking">Booking</a>
           </div>
@@ -84,6 +89,9 @@
     </header>
 
     <div id="pages">
+      <section id="home">
+        <div class="home-wrapper container"></div>
+      </section>
       <section id="order">
         <div id="product-list" class="product-list container"></div>
       </section>
@@ -91,6 +99,162 @@
         <div class="booking-wrapper container"></div>
       </section>
     </div>
+
+    <script id="template-home" type="text/x-handlebars-template">
+      <div class='home'>
+        <div class='home-actions'>
+
+          <a href='#order' class='box-action-1 box-action home-nav'>
+            <span>ORDER ONLINE</span>
+            <p>Delicious food delivered to your door</p>
+            <img src='./images/home/pizza-1.jpg' />
+          </a>
+
+          <a href='#booking' class='box-action-2 box-action home-nav'>
+            <span>BOOK A TABLE</span>
+            <p>Delicious food awaits you</p>
+            <img src='./images/home/pizza-2.jpg' />
+
+          </a>
+        </div>
+        <div class='opening-hours'>
+          <h2>Opening hours:</h2>
+          <p>Tue-Sun, 12PM - 12AM</p>
+        </div>
+        <div class='main-carousel'>
+          <div class='carousel-cell'>
+            <div class='carousel-box'>
+              <div class='carousel-image'>
+                <img src='./images/home/pizza-3.jpg' />
+              </div>
+              <div class='carousel-description'>
+                <h2 class='carousel-tittle'>Best service</h2>
+                <p>Spicy jalapeno bacon ipsum dolor amet short loin alcatra
+                  buffalo pork chop short ribs, flank hamburger shoulder jerky
+                  sirloin prosciutto t-bone corned beef meatball.</p>
+                <p>Nickolaus Xiao</p>
+              </div>
+            </div>
+          </div>
+          <div class='carousel-cell'>
+            <div class='carousel-box'>
+              <div class='carousel-image'>
+                <img src='./images/home/pizza-3.jpg' />
+              </div>
+              <div class='carousel-description'>
+                <h2 class='carousel-tittle'>Great venue</h2>
+                <p>Spicy jalapeno bacon ipsum dolor amet short loin alcatra
+                  buffalo pork chop short ribs, flank hamburger shoulder jerky
+                  sirloin prosciutto t-bone corned beef meatball.</p>
+                <p>Féchín Patrick</p>
+              </div>
+            </div>
+          </div>
+          <div class='carousel-cell'>
+            <div class='carousel-box'>
+              <div class='carousel-image'>
+                <img src='./images/home/pizza-3.jpg' />
+              </div>
+              <div class='carousel-description'>
+                <h2 class='carousel-tittle'>Good snacks</h2>
+                <p>Spicy jalapeno bacon ipsum dolor amet short loin alcatra
+                  buffalo pork chop short ribs, flank hamburger shoulder jerky
+                  sirloin prosciutto t-bone corned beef meatball.</p>
+                <p>Evi Susskind</p>
+              </div>
+            </div>
+          </div>
+          <div class='carousel-cell'>
+            <div class='carousel-box'>
+              <div class='carousel-image'>
+                <img src='./images/home/pizza-3.jpg' />
+              </div>
+              <div class='carousel-description'>
+                <h2 class='carousel-tittle'>Delicious food</h2>
+                <p>Spicy jalapeno bacon ipsum dolor amet short loin alcatra
+                  buffalo pork chop short ribs, flank hamburger shoulder jerky
+                  sirloin prosciutto t-bone corned beef meatball.</p>
+                <p>Layne Bellandi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='gallery'>
+          <div class='row'>
+            <div class='gallery-box'>
+              <div class='gallery-image'>
+                <img src='./images/home/pizza-4.jpg' />
+                <div class='gallery-icon'>
+                  <a href='#'><i class='fas fa-heart icon'></i><span
+                    >heart</span></a>
+                  <a href='#'><i class='fas fa-share-alt icon'></i><span
+                    >share</span></a>
+                </div>
+              </div>
+            </div>
+            <div class='gallery-box'>
+              <div class='gallery-image'>
+                <img src='./images/home/pizza-5.jpg' />
+                <div class='gallery-icon'>
+                  <a href='#'><i class='fas fa-heart icon'></i><span
+                    >heart</span></a>
+                  <a href='#'><i class='fas fa-share-alt icon'></i><span
+                    >share</span></a>
+                </div>
+              </div>
+            </div>
+            <div class='gallery-box'>
+              <div class='gallery-image'>
+                <img src='./images/home/pizza-6.jpg' />
+                <div class='gallery-icon'>
+                  <a href='#'><i class='fas fa-heart icon'></i><span
+                    >heart</span></a>
+                  <a href='#'><i class='fas fa-share-alt icon'></i><span
+                    >share</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='gallery-box'>
+              <div class='gallery-image'>
+                <img src='./images/home/pizza-7.jpg' />
+                <div class='gallery-icon'>
+                  <a href='#'><i class='fas fa-heart icon'></i><span
+                    >heart</span></a>
+                  <a href='#'><i class='fas fa-share-alt icon'></i><span
+                    >share</span></a>
+                </div>
+              </div>
+            </div>
+            <div class='gallery-box'>
+              <div class='gallery-image'>
+                <img src='./images/home/pizza-8.jpg' />
+                <div class='gallery-icon'>
+                  <a href='#'><i class='fas fa-heart icon'></i><span
+                    >heart</span></a>
+                  <a href='#'><i class='fas fa-share-alt icon'></i><span
+                    >share</span></a>
+                </div>
+              </div>
+            </div>
+            <div class='gallery-box'>
+              <div class='gallery-image'>
+                <img src='./images/home/pizza-9.jpg' />
+                <div class='gallery-icon'>
+                  <a href='#'><i class='fas fa-heart icon'></i><span
+                    >heart</span></a>
+                  <a href='#'><i class='fas fa-share-alt icon'></i><span
+                    >share</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href='#' class='instagram'>View more on instagram</a>
+        </div>
+      </div>
+    </script>
 
     <script id="template-booking-widget" type="text/x-handlebars-template">
       <div class='booking-widget'>
