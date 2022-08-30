@@ -294,9 +294,9 @@ class Booking {
           parsedResponse.duration,
           parsedResponse.table
         );
-        // console.log('parsedResponse', parsedResponse);
+        console.log('parsedResponse', parsedResponse);
       });
-    // console.log('payload', payload);
+    console.log('payload', payload);
   }
 
   initWidgets() {
