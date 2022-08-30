@@ -150,6 +150,8 @@ class Booking {
       thisBooking.selectedTable = '';
       if (!isNaN(tableId)) {
         tableId = parseInt(tableId);
+      } else if (table.classList.contains(classNames.booking.tableSelected)) {
+        table.classList.add(classNames.booking.tableBooked);
       }
 
       if (
@@ -294,8 +296,11 @@ class Booking {
           parsedResponse.duration,
           parsedResponse.table
         );
+        thisBooking.updateDom();
+
         console.log('parsedResponse', parsedResponse);
       });
+
     console.log('payload', payload);
   }
 
